@@ -1,0 +1,15 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: CDG's simple web app
+  helloMessageValue: This is the hello message
+springdoc:
+  api-docs:
+    path: /api-docs-ByCDG
+  swagger-ui:
+    path: /swagger-ui-ByCDG
+    operationsSorter: method
+
+myKeys:
+  greet: this is my greeting

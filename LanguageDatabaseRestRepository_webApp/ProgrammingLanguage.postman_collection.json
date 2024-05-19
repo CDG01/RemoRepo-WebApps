@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "50d9ae05-f6c6-4261-9769-ad491cdc2aed",
+		"name": "ProgrammingLanguage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34631713"
+	},
+	"item": [
+		{
+			"name": "createProgrammingLanguage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"C++\",\r\n  \"firstAppearance\": \"05-06-2023\",\r\n  \"inventor\": \"Chiara\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/repo-prog-languages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"repo-prog-languages"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "createProgramminLanguage - C++",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"C++\",\r\n  \"firstAppearance\": \"05-06-2023\",\r\n  \"inventor\": \"Chiara\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/repo-prog-languages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"repo-prog-languages"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Location",
+							"value": "http://localhost:5050/programmingLanguages/2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/hal+json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 May 2024 16:58:49 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"C++\",\n    \"firstAppearance\": \"05-06-2023\",\n    \"inventor\": \"Chiara\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://localhost:5050/programmingLanguages/2\"\n        },\n        \"programmingLanguage\": {\n            \"href\": \"http://localhost:5050/programmingLanguages/2\"\n        }\n    }\n}"
+				},
+				{
+					"name": "createProgrammingLanguage - java",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"C++\",\r\n  \"firstAppearance\": \"05-06-2023\",\r\n  \"inventor\": \"Chiara\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/repo-prog-languages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"repo-prog-languages"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Location",
+							"value": "http://localhost:5050/programmingLanguages/4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/hal+json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 May 2024 17:01:02 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"C++\",\n    \"firstAppearance\": \"05-06-2023\",\n    \"inventor\": \"Chiara\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://localhost:5050/programmingLanguages/4\"\n        },\n        \"programmingLanguage\": {\n            \"href\": \"http://localhost:5050/programmingLanguages/4\"\n        }\n    }\n}"
+				},
+				{
+					"name": "createProgrammingLanguage - JavaScript",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"JavaScript\",\r\n  \"firstAppearance\": \"07-06-2023\",\r\n  \"inventor\": \"Chiara\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/repo-prog-languages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"repo-prog-languages"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Location",
+							"value": "http://localhost:5050/programmingLanguages/5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/hal+json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 May 2024 17:01:56 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"JavaScript\",\n    \"firstAppearance\": \"07-06-2023\",\n    \"inventor\": \"Chiara\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://localhost:5050/programmingLanguages/5\"\n        },\n        \"programmingLanguage\": {\n            \"href\": \"http://localhost:5050/programmingLanguages/5\"\n        }\n    }\n}"
+				},
+				{
+					"name": "createProgrammingLanguage - Go",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Go\",\r\n  \"firstAppearance\": \"08-06-2023\",\r\n  \"inventor\": \"Chiara\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/repo-prog-languages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"repo-prog-languages"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Location",
+							"value": "http://localhost:5050/programmingLanguages/6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/hal+json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 May 2024 17:02:31 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Go\",\n    \"firstAppearance\": \"08-06-2023\",\n    \"inventor\": \"Chiara\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://localhost:5050/programmingLanguages/6\"\n        },\n        \"programmingLanguage\": {\n            \"href\": \"http://localhost:5050/programmingLanguages/6\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "getPagedProgrammingLanguage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/repo-prog-languages?size=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"repo-prog-languages"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/programmingLanguages?size=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"programmingLanguages"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/hal+json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 May 2024 17:08:17 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_embedded\": {\n        \"programmingLanguages\": [\n            {\n                \"name\": \"java\",\n                \"firstAppearance\": \"5\",\n                \"inventor\": \"chiara\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"http://localhost:5050/programmingLanguages/1\"\n                    },\n                    \"programmingLanguage\": {\n                        \"href\": \"http://localhost:5050/programmingLanguages/1\"\n                    }\n                }\n            },\n            {\n                \"name\": \"C++\",\n                \"firstAppearance\": \"05-06-2023\",\n                \"inventor\": \"Chiara\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"http://localhost:5050/programmingLanguages/2\"\n                    },\n                    \"programmingLanguage\": {\n                        \"href\": \"http://localhost:5050/programmingLanguages/2\"\n                    }\n                }\n            }\n        ]\n    },\n    \"_links\": {\n        \"first\": {\n            \"href\": \"http://localhost:5050/programmingLanguages?page=0&size=2\"\n        },\n        \"self\": {\n            \"href\": \"http://localhost:5050/programmingLanguages?page=0&size=2\"\n        },\n        \"next\": {\n            \"href\": \"http://localhost:5050/programmingLanguages?page=1&size=2\"\n        },\n        \"last\": {\n            \"href\": \"http://localhost:5050/programmingLanguages?page=2&size=2\"\n        },\n        \"profile\": {\n            \"href\": \"http://localhost:5050/profile/programmingLanguages\"\n        }\n    },\n    \"page\": {\n        \"size\": 2,\n        \"totalElements\": 6,\n        \"totalPages\": 3,\n        \"number\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "updateInventor",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"inventor\": \"Chiara De Guglielmo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/repo-prog-languages/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"repo-prog-languages",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "updateInventor",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"inventor\": \"Chiara De Guglielmo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/repo-prog-languages/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"repo-prog-languages",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/hal+json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 May 2024 17:21:24 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"C++\",\n    \"firstAppearance\": \"05-06-2023\",\n    \"inventor\": \"Chiara De Guglielmo\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://localhost:5050/repo-prog-languages/1\"\n        },\n        \"programmingLanguage\": {\n            \"href\": \"http://localhost:5050/repo-prog-languages/1\"\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
