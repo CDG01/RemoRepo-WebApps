@@ -43,7 +43,7 @@ public class CarController {
             }
         */
     }
-    @PutMapping("/{id}")
+    @PatchMapping("/{id}")
     public Car updateType(@PathVariable long id, @RequestParam String type){
         if(carRepository.existsById(id)) {
             Car car = new Car();
@@ -57,7 +57,7 @@ public class CarController {
         }
 
         /* ALTERNATIVA:
-            @PutMapping("/{id}")
+            @PatchMapping("/{id}")
             public Car updateCarType(@PathVariable Long id, @RequestParam String type) {
             Optional<Car> optionalCar = carRepository.findById(id);
             if (optionalCar.isPresent()) {
@@ -70,6 +70,19 @@ public class CarController {
             }
         */
     }
+
+    @PutMapping("/{id}")
+    public Car updateType(@PathVariable long id, @RequestBody Car car) {
+        if (carRepository.existsById(id)) {
+            car.setId(id);
+            Car updatedCar = carRepository.saveAndFlush(car);
+            return updatedCar;
+        } else {
+            Car nullCar = new Car();
+            return nullCar;
+        }
+    }
+
     @DeleteMapping("/{id}")
     public void deleteCar(@PathVariable long id){
         if(carRepository.existsById(id)) {

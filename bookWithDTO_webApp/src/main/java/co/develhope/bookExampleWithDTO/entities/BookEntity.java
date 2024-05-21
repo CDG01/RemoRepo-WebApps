@@ -5,17 +5,9 @@ import jakarta.validation.constraints.NotNull;
 
 public class BookEntity {
     private Long id;
-    @NotNull
-    @NotBlank
     private String title;
-    @NotNull
-    @NotBlank
     private String author;
-    @NotNull
-    @NotBlank
     private String isbn;
-    @NotNull
-    @NotBlank
     private boolean isAMasterpiece;
 
     public BookEntity() {}

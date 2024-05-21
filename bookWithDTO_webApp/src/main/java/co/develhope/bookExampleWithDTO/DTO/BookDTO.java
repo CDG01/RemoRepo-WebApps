@@ -1,12 +1,23 @@
 package co.develhope.bookExampleWithDTO.DTO;
 
-public class BookCreationDTO {
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+public class BookDTO {
+    @NotNull(message = "Title may not be null")
+    @NotBlank // E' solo per le stringhe: significa che non può essere la stringa ''
     private String title;
+    @NotNull
+    @NotBlank
     private String author;
+    @NotNull
+    @NotBlank
     private String isbn;
+    @NotNull
+    @NotBlank
     private boolean isAMasterpiece;
 
-    public BookCreationDTO(String title, String author, String isbn, boolean isAMasterpiece) {
+    public BookDTO(String title, String author, String isbn, boolean isAMasterpiece) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;

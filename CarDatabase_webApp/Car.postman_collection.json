@@ -199,7 +199,7 @@
 		{
 			"name": "ModifyTypeOfACar",
 			"request": {
-				"method": "PUT",
+				"method": "PATCH",
 				"header": [],
 				"url": {
 					"raw": "localhost:8080/car/3?type=ibrido",
@@ -221,9 +221,9 @@
 			},
 			"response": [
 				{
-					"name": "modityTypeOfACar",
+					"name": "modifyTypeOfACar",
 					"originalRequest": {
-						"method": "PUT",
+						"method": "PATCH",
 						"header": [],
 						"url": {
 							"raw": "localhost:8080/car/2?type=ibrido",
@@ -274,7 +274,7 @@
 				{
 					"name": "ModifyTypeOfACar But id doasn't exist",
 					"originalRequest": {
-						"method": "PUT",
+						"method": "PATCH",
 						"header": [],
 						"url": {
 							"raw": "localhost:8080/car/3?type=ibrido",
@@ -357,6 +357,34 @@
 					"path": [
 						"car",
 						"deleteAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModityACar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"modelName\": \"l'ultima Toyota\",\r\n    \"type\": \"aria\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/car/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"car",
+						"2"
 					]
 				}
 			},

@@ -1,6 +1,6 @@
 package co.develhope.bookExampleWithDTO.controllers;
 
-import co.develhope.bookExampleWithDTO.DTO.BookCreationDTO;
+import co.develhope.bookExampleWithDTO.DTO.BookDTO;
 import co.develhope.bookExampleWithDTO.Mapper.BookMapper;
 import co.develhope.bookExampleWithDTO.entities.BookEntity;
 import co.develhope.bookExampleWithDTO.services.BookService;
@@ -34,20 +34,27 @@ public class BookController {
         BookEntity book = bookService.getBookById(id);
         if (book != null) {
             return ResponseEntity.ok().body(book);
+            // quest'ultima riga è equivalente a: return ResponseEntity.status(HttpStatus.OK).body(createdBook);
         } else {
             return ResponseEntity.notFound().build();
         }
     }
 
     @PostMapping("/add")
-    public ResponseEntity createBook(@Valid @RequestBody BookCreationDTO bookDTO, BindingResult bindingResult) {
+    public ResponseEntity<?> createBook(@Valid @RequestBody BookDTO bookDTO, BindingResult bindingResult) {
         if (bindingResult.hasErrors()){
             return ResponseEntity.badRequest().body(bindingResult.getAllErrors());
         } else {
-            BookEntity book = mapper.toBook(bookDTO);
+            BookEntity book = mapper.toEntity(bookDTO);
             BookEntity createdBook = bookService.createBook(book);
             return ResponseEntity.status(HttpStatus.CREATED).body(createdBook);
         }
+
+        /*
+        ResponseEntity rappresenta il http response. E' un oggetto con attributi body, status code e header del http response.
+        Per questo, questo oggetto ha senso solo se ritornato da controller
+        il punto interrogativo indica che il tipo di dato nella response è variabile a seconda del clocco if: questo controoler potrebbe ritornare un ResponseEntity<List<ObjectError>> o un ResponseEntity<BookEntity>
+         */
 
     }
 
