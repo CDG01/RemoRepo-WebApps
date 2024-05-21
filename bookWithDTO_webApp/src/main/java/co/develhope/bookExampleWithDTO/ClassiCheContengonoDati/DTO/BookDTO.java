@@ -1,4 +1,4 @@
-package co.develhope.bookExampleWithDTO.DTO;
+package co.develhope.bookExampleWithDTO.ClassiCheContengonoDati.DTO;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -13,8 +13,6 @@ public class BookDTO {
     @NotNull
     @NotBlank
     private String isbn;
-    @NotNull
-    @NotBlank
     private boolean isAMasterpiece;
 
     public BookDTO(String title, String author, String isbn, boolean isAMasterpiece) {

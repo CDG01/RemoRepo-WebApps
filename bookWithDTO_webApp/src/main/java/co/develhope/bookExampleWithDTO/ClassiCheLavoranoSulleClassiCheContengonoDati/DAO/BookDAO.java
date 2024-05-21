@@ -1,6 +1,6 @@
-package co.develhope.bookExampleWithDTO.DAO;
+package co.develhope.bookExampleWithDTO.ClassiCheLavoranoSulleClassiCheContengonoDati.DAO;
 
-import co.develhope.bookExampleWithDTO.entities.BookEntity;
+import co.develhope.bookExampleWithDTO.ClassiCheContengonoDati.entities.BookEntity;
 
 import java.util.List;
 

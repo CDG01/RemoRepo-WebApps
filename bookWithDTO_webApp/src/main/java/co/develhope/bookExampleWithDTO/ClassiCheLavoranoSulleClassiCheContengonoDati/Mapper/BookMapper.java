@@ -1,7 +1,7 @@
-package co.develhope.bookExampleWithDTO.Mapper;
+package co.develhope.bookExampleWithDTO.ClassiCheLavoranoSulleClassiCheContengonoDati.Mapper;
 
-import co.develhope.bookExampleWithDTO.DTO.BookDTO;
-import co.develhope.bookExampleWithDTO.entities.BookEntity;
+import co.develhope.bookExampleWithDTO.ClassiCheContengonoDati.DTO.BookDTO;
+import co.develhope.bookExampleWithDTO.ClassiCheContengonoDati.entities.BookEntity;
 import org.springframework.stereotype.Component;
 
 @Component

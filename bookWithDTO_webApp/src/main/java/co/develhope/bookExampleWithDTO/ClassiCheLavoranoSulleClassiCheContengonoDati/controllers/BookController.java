@@ -1,14 +1,15 @@
-package co.develhope.bookExampleWithDTO.controllers;
+package co.develhope.bookExampleWithDTO.ClassiCheLavoranoSulleClassiCheContengonoDati.controllers;
 
-import co.develhope.bookExampleWithDTO.DTO.BookDTO;
-import co.develhope.bookExampleWithDTO.Mapper.BookMapper;
-import co.develhope.bookExampleWithDTO.entities.BookEntity;
-import co.develhope.bookExampleWithDTO.services.BookService;
+import co.develhope.bookExampleWithDTO.ClassiCheContengonoDati.DTO.BookDTO;
+import co.develhope.bookExampleWithDTO.ClassiCheLavoranoSulleClassiCheContengonoDati.Mapper.BookMapper;
+import co.develhope.bookExampleWithDTO.ClassiCheContengonoDati.entities.BookEntity;
+import co.develhope.bookExampleWithDTO.ClassiCheLavoranoSulleClassiCheContengonoDati.services.BookService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -43,6 +44,10 @@ public class BookController {
     @PostMapping("/add")
     public ResponseEntity<?> createBook(@Valid @RequestBody BookDTO bookDTO, BindingResult bindingResult) {
         if (bindingResult.hasErrors()){
+            // mostro in console i messaggi di errore
+            for (FieldError error : bindingResult.getFieldErrors()){
+                System.out.println("ERRORE: " + error.getObjectName() + " - " + error.getDefaultMessage());
+            }
             return ResponseEntity.badRequest().body(bindingResult.getAllErrors());
         } else {
             BookEntity book = mapper.toEntity(bookDTO);

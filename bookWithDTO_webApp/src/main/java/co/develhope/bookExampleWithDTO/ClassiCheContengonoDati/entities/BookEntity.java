@@ -1,12 +1,18 @@
-package co.develhope.bookExampleWithDTO.entities;
+package co.develhope.bookExampleWithDTO.ClassiCheContengonoDati.entities;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public class BookEntity {
     private Long id;
+    @NotNull(message = "Title may not be null")
+    @NotBlank // E' solo per le stringhe: significa che non può essere la stringa ''
     private String title;
+    @NotNull
+    @NotBlank
     private String author;
+    @NotNull
+    @NotBlank
     private String isbn;
     private boolean isAMasterpiece;
 

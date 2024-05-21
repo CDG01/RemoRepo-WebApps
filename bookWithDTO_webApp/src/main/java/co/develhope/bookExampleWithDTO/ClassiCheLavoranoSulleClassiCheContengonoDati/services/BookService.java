@@ -1,6 +1,6 @@
-package co.develhope.bookExampleWithDTO.services;
+package co.develhope.bookExampleWithDTO.ClassiCheLavoranoSulleClassiCheContengonoDati.services;
 
-import co.develhope.bookExampleWithDTO.entities.BookEntity;
+import co.develhope.bookExampleWithDTO.ClassiCheContengonoDati.entities.BookEntity;
 
 import java.util.List;
 import java.util.Map;

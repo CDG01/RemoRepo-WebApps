@@ -1,7 +1,7 @@
-package co.develhope.bookExampleWithDTO.services;
+package co.develhope.bookExampleWithDTO.ClassiCheLavoranoSulleClassiCheContengonoDati.services;
 
-import co.develhope.bookExampleWithDTO.DAO.BookDAO;
-import co.develhope.bookExampleWithDTO.entities.BookEntity;
+import co.develhope.bookExampleWithDTO.ClassiCheLavoranoSulleClassiCheContengonoDati.DAO.BookDAO;
+import co.develhope.bookExampleWithDTO.ClassiCheContengonoDati.entities.BookEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
