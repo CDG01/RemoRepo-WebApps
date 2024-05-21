@@ -1,4 +1,4 @@
-
+package com.mySociety.EnrollmentsMayToMany_webApp.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
