@@ -1,16 +1,16 @@
 package co.develhope.bookExampleWithDTO.ClassiCheLavoranoSulleClassiCheContengonoDati.DAO;
 
-import co.develhope.bookExampleWithDTO.ClassiCheContengonoDati.entities.BookEntity;
+import co.develhope.bookExampleWithDTO.ClassiCheContengonoDati.entities.Book;
 
 import java.util.List;
 
 public interface BookDAO {
-    List<BookEntity> getAllBooks();
-    BookEntity getBookById(Long id);
-    BookEntity createBook(BookEntity book);
-    BookEntity updateBook(Long id, BookEntity book);
-    BookEntity deleteBook(Long id);
+    List<Book> getAllBooks();
+    Book getBookById(Long id);
+    Book createBook(Book book);
+    Book updateBook(Book book);
+    Book deleteBook(Long id);
     void deleteAllBooks();
-    List<BookEntity> searchBooks(String title, String author, String isbn);
+    List<Book> searchBooks(String title, String author, String isbn);
 
 }

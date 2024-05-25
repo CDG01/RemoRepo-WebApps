@@ -1,21 +1,19 @@
 package co.develhope.bookExampleWithDTO.ClassiCheLavoranoSulleClassiCheContengonoDati.services;
 
-import co.develhope.bookExampleWithDTO.ClassiCheContengonoDati.entities.BookEntity;
+import co.develhope.bookExampleWithDTO.ClassiCheContengonoDati.DTO.BookCreationDTO;
+import co.develhope.bookExampleWithDTO.ClassiCheContengonoDati.DTO.BookUpdatePatchDTO;
+import co.develhope.bookExampleWithDTO.ClassiCheContengonoDati.entities.Book;
 
 import java.util.List;
-import java.util.Map;
 
 public interface BookService {
-    List<BookEntity> getAllBooks();
-    BookEntity getBookById(long id);
-    BookEntity createBook(BookEntity book);
-    BookEntity updateBook(long id, BookEntity book);
-
-    BookEntity updateBook(Long id, Map<String, String> updates);
-
-    BookEntity deleteBook(long id);
+    List<Book> getAllBooks();
+    Book getBookById(long id);
+    Book createBook(BookCreationDTO book);
+    Book checkAndUpdateBook(Long id, BookUpdatePatchDTO book);
+    Book updateBook(Book book);
+    Book deleteBook(long id);
     void deleteAllBooks();
-
-    List<BookEntity> searchBooks(String title, String author, String isbn);
+    List<Book> searchBooks(String title, String author, String isbn);
 
 }

@@ -3,44 +3,36 @@ package co.develhope.bookExampleWithDTO.ClassiCheContengonoDati.entities;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
-public class BookEntity {
+public class Book {
     private Long id;
-    @NotNull(message = "Title may not be null")
-    @NotBlank // E' solo per le stringhe: significa che non può essere la stringa ''
     private String title;
-    @NotNull
-    @NotBlank
     private String author;
-    @NotNull
-    @NotBlank
     private String isbn;
-    private boolean isAMasterpiece;
+    private Boolean isAMasterpiece;
 
-    public BookEntity() {}
+    public Book() {}
 
-    public BookEntity(Long id, String title, String author, String isbn) {
+    public Book(Long id, String title, String author, String isbn) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.isbn = isbn;
     }
 
-    public BookEntity(String title, String author, String isbn, boolean isAMasterpiece) {
+    public Book(String title, String author, String isbn, Boolean isAMasterpiece) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
         this.isAMasterpiece = isAMasterpiece;
     }
 
-    public BookEntity(Long id, String title, String author, String isbn, boolean isAMasterpiece) {
+    public Book(Long id, String title, String author, String isbn, Boolean isAMasterpiece) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.isbn = isbn;
         this.isAMasterpiece = isAMasterpiece;
     }
-
-
 
     public Long getId() {
         return id;
@@ -75,11 +67,11 @@ public class BookEntity {
     }
 
 
-    public boolean isIsAMasterpiece() {
+    public Boolean isIsAMasterpiece() {
         return isAMasterpiece;
     }
 
-    public void setIsAMasterpiece(boolean isAMasterpiece) {
+    public void setIsAMasterpiece(Boolean isAMasterpiece) {
         this.isAMasterpiece = isAMasterpiece;
     }
 
