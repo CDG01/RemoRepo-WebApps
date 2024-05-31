@@ -1,0 +1,18 @@
+# configurazione dell'ambiente di produzione: uso un db mysql
+# per scegliere questa configurazione, devo settare una configurazione su intellij con Environment Variable SPRING_PROFILES_ACTIVE=prod
+# ci metto 'prod' perché ho chiamato in questo modo il file yml dopo il trattino
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/crud_test
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: mysql
+    show_sql: true
+    hibernate:
+      ddl-auto: create-drop
+    jackson:
+      serialization:
+        fail-on-empty-beans: false

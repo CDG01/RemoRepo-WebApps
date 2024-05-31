@@ -1,0 +1,13 @@
+# configurazione dell'ambiente di test: uso un db h2
+# per scegliere questa configurazione, devo settare una configurazione su intellij con Environment Variable SPRING_PROFILES_ACTIVE=test
+# ci metto 'test' perché ho chiamato in questo modo il file yml dopo il trattino
+
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: test
+    password: test
+    url: jdbc:h2:mem:testdb
+  jpa:
+    database: h2
