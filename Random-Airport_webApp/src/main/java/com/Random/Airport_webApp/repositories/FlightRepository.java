@@ -16,14 +16,14 @@ import java.util.List;
 public interface FlightRepository extends JpaRepository<Flight, Long> {
     List<Flight> findByStatus(Status status);
 
-    // Version without Custom Query
-    List<Flight> findByStatusOrStatus(@Param("status1") Status status1, @Param("status2") Status status2);
+    List<Flight> findByStatusOrStatus(Status status1, Status status2);
 
-    // Version Custom Query
     @Query("SELECT f FROM Flight f WHERE f.status = ?1 OR f.status = ?2")
     List<Flight> customQuery_getFlightsWhereStatus1OrStatus2(Status status1, Status status2);
+    //@Query("SELECT f FROM Flight f WHERE f.status = :statusA OR f.status = :statusB")
+    //List<Flight> customQuery_getFlightsWhereStatus1OrStatus2(@Param("statusA") Status status1,@Param("statusB") Status status2);
 
-    @Query(value = "SELECT * FROM flights ORDER BY from_airport", nativeQuery = true)
+    @Query(value = "SELECT * FROM flight ORDER BY from_airport", nativeQuery = true)
     Page<Flight> customQuery_getFlightsPagedAndOrderedByFromAirport(Pageable pageable);
     // Page<Flight> getFlightPaged(Pageable pageable);
 

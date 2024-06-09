@@ -24,8 +24,8 @@ public class FlightController {
         return ResponseEntity.ok().body(flightsFound);
     }
 
-    @PostMapping
-    public ResponseEntity<List<Flight>> create50Flights() {
+    @PostMapping("/50Flight")
+    public ResponseEntity<List<Flight>> creates50Flights() {
         List<Flight> flights = flightService.create50Flights();
         return ResponseEntity.ok().body(flights);
     }
@@ -44,7 +44,7 @@ public class FlightController {
     }
 
     @GetMapping("/pagedAndOrdered")
-    public ResponseEntity<Page<Flight>> getAllFlights(@RequestParam int page, @RequestParam int size) {
+    public ResponseEntity<Page<Flight>> getFlights(@RequestParam int page, @RequestParam int size) {
         Page<Flight> flightPagedAndOrdered = this.flightService.getFlightPagedAndOrdered(page, size);
         return ResponseEntity.ok().body(flightPagedAndOrdered);
     }
