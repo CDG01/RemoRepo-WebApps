@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import com.Interceptors.LogAndLegacyMiddleware_webApp.interceptors.*;
 
-@Component
+@Configuration
 public class SpringMvcConfiguration implements WebMvcConfigurer {
     @Autowired
     private APILoggingInterceptor apiLoggingInterceptor;

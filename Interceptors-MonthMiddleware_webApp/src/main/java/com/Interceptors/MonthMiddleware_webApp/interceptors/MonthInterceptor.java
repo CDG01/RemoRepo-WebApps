@@ -29,7 +29,10 @@ public class MonthInterceptor implements HandlerInterceptor {
 
         if (monthNumberHeader == null || monthNumberHeader.isEmpty()) {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid monthNumber header: monthNumber header is missing or empty");
-            // alternativa: response.setStatus(400);
+            // alternativa buona: response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            // alternativa buona: response.setStatus(HttpStatus.BAD_REQUEST);
+            // alternativa cattiva: response.setStatus(400); perché non va bene usare literals, ovvero costanti. Meglio usare enum/variabili
+
             return false;
         } else {
 
