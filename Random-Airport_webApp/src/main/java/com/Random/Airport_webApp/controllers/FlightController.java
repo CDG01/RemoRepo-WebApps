@@ -74,6 +74,12 @@ public class FlightController {
         return ResponseEntity.ok().body(flightsFound);
     }
 
+    @GetMapping("/byTwoStatus_generic")
+    public ResponseEntity<List<Flight>> getFlightByTwoStatuses_generic(@RequestParam(value="status") List<Status> statuses) {
+        List<Flight> flightsFound = flightService.getFlightByTwoStatuses_generic(statuses);
+        return ResponseEntity.ok().body(flightsFound);
+    }
+
     @GetMapping("/byTwoStatus_CustomQuery")
     public ResponseEntity<List<Flight>> getFlightByTwoStatuses_CustomQuery(@RequestParam Status p1, @RequestParam Status p2) {
         List<Flight> flightsFound = this.flightService.getFlightByTwoStatuses_CustomQuery(p1, p2);

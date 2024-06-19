@@ -81,6 +81,10 @@ public class FlightService {
                 .toList();
     }
 
+    public List<Flight> getFlightByTwoStatuses_generic(List<Status> statuses) {
+        return flightRepository.findByStatusIn(statuses);
+    }
+
     public List<Flight> getFlightByTwoStatuses_CustomQuery( Status status1, Status status2) {
         return flightRepository.customQuery_getFlightsWhereStatus1OrStatus2(status1, status2);
     }

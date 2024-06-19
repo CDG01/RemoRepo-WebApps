@@ -10,6 +10,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
 import java.util.List;
 
 @Repository
@@ -17,6 +18,9 @@ public interface FlightRepository extends JpaRepository<Flight, Long> {
     List<Flight> findByStatus(Status status);
 
     List<Flight> findByStatusOrStatus(Status status1, Status status2);
+
+
+    List<Flight> findByStatusIn(Collection<Status> statuses);
 
     @Query("SELECT f FROM Flight f WHERE f.status = ?1 OR f.status = ?2")
     List<Flight> customQuery_getFlightsWhereStatus1OrStatus2(Status status1, Status status2);

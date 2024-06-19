@@ -35,7 +35,6 @@ public class ServicesTests {
     @Test
     public void testCreateStudent() {
         StudentDto studentDtoInput = new StudentDto();
-        studentDtoInput.setId(1L);
         studentDtoInput.setName("Mario");
         studentDtoInput.setSurname("Rossi");
         studentDtoInput.setIsWorking(true);
@@ -47,7 +46,6 @@ public class ServicesTests {
         studentDtoOutput.setIsWorking(true);
 
         StudentEntity studentEntityInput = new StudentEntity();
-        studentEntityInput.setId(1L);
         studentEntityInput.setName("Mario");
         studentEntityInput.setSurname("Rossi");
         studentEntityInput.setIsWorking(true);
@@ -58,11 +56,15 @@ public class ServicesTests {
         studentEntityOutput.setSurname("Rossi");
         studentEntityOutput.setIsWorking(true);
 
+        // arrange
         when(mapper.map(studentDtoInput, StudentEntity.class)).thenReturn(studentEntityInput);
         when(studentRepository.saveAndFlush(any(StudentEntity.class))).thenReturn(studentEntityOutput);
         when(mapper.map(studentEntityOutput, StudentDto.class)).thenReturn(studentDtoOutput);
 
+        // act
         StudentDto StudentDtoOutput_returnedByService = studentService.createUser(studentDtoInput);
+
+        // assert
         assertEquals("Mario", StudentDtoOutput_returnedByService.getName());
         assertEquals("Rossi", StudentDtoOutput_returnedByService.getSurname());
         assertEquals(true, StudentDtoOutput_returnedByService.getIsWorking());
