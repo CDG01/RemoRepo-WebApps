@@ -5,6 +5,7 @@ import co.develhope.fileUploader.entities.User;
 import co.develhope.fileUploader.repositories.UserRepository;
 import co.develhope.fileUploader.services.FileStorageService;
 import co.develhope.fileUploader.services.UserService;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.SneakyThrows;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletResponse;
+//import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Optional;
 
@@ -60,8 +61,7 @@ public class UserController {
             case "gif":
                 response.setContentType(MediaType.IMAGE_GIF_VALUE);
                 break;
-            case "jpg":
-            case "jpeg":
+            case "jpg","jpeg":
                 response.setContentType(MediaType.IMAGE_JPEG_VALUE);
                 break;
             case "png":

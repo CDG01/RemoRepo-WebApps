@@ -10,14 +10,14 @@ import org.springframework.core.io.Resource;
 import java.io.IOException;
 
 @RestController
-@RequestMapping("/upload")
+@RequestMapping("/file")
 public class UploadController {
 
     @Autowired
     private FilesStorageService filesStorageService;
 
-    @PostMapping("/file")
-    public String uploadFile(@RequestParam(value = "file") MultipartFile file) {
+    @PostMapping("")
+    public String uploadFile(@RequestParam(value = "fileToUpload") MultipartFile file) {
         if (file.isEmpty()) {
             return "File is Empty";
         }
@@ -27,11 +27,11 @@ public class UploadController {
         } catch (IOException e) {
             return "Errore di input del file. Non riesco a leggerlo";
         } catch (Exception e) {
-            return "C'Ã¨ stato un errore generico";
+            return "C'è stato un errore generico";
         }
     }
 
-    @GetMapping("/read")
+    @GetMapping("")
     public ResponseEntity<Resource> readFile(@RequestParam(value = "fileName") String fileName) {
         Resource resource = filesStorageService.readFile(fileName);
         return ResponseEntity.ok().header(
